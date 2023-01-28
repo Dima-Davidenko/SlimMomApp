@@ -1,0 +1,28 @@
+.container {
+  max-width: 550px;
+}
+.formTitle {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.button {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .inputsWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+  }
+  .formTitle {
+    margin-bottom: 40px;
+    font-size: 34px;
+  }
+  .button {
+    margin-top: 50px;
+  }
+}

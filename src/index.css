@@ -1,13 +1,166 @@
-body {
+@import '~/node_modules/modern-normalize/modern-normalize.css';
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+:root.themeLight {
+  --bgColor: #ffffff;
+  --greyColor: #e0e0e0;
+  --greyTextColor: #9b9faa;
+  --greyBgColor: #eff1f3;
+  --mainTextColor: #212121;
+  --accentColor: #fc842d;
+}
+:root.themeDark {
+  --bgColor: #424242;
+  --greyColor: #e0e0e0;
+  --greyTextColor: #9b9faa;
+  --greyBgColor: #eff1f3;
+  --mainTextColor: #ffffff;
+  --accentColor: #fc842d;
+}
+body {
+  font-family: Verdana;
+  letter-spacing: 0.04em;
+  color: var(--mainTextColor);
+  background-color: var(--bgColor);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.appContainer {
+  margin: 0 auto;
+  max-width: 1280px;
+  min-height: 100vh;
+}
+@media screen and (min-width: 768px) {
+  .backgroundImg {
+    background-image: url('./assets/images/back-tab.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .backgroundImg {
+    background-image: url('./assets/images/back-desk.png');
+  }
 }

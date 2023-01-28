@@ -1,0 +1,11 @@
+.container {
+  display: none;
+}
+.container.LoggedIn {
+  display: block;
+}
+@media screen and (min-width: 1280px) {
+  .container.LoggedIn {
+    display: none;
+  }
+}

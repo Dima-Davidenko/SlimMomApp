@@ -1,0 +1,26 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--greyColor);
+}
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 20px 32px 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    justify-content: start;
+    align-items: end;
+    padding: 0;
+    padding-top: 80px;
+    padding-left: 16px;
+    border: none;
+    height: 155px;
+  }
+}

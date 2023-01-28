@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 47px;
+  height: 44px;
+  cursor: pointer;
+}
+.woman {
+  display: block;
+  width: 46px;
+  height: 44px;
+  margin-right: 10px;
+}
+.slimMom {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .slimMom.LoggedIn {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    width: 162px;
+  }
+  .slimMom {
+    display: block;
+    width: 106px;
+    height: 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    flex-grow: 0;
+    position: relative;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 167px;
+    height: 66px;
+  }
+  .slimMom {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    width: 108px;
+    height: 16px;
+  }
+  .woman {
+    width: 70px;
+    height: 66px;
+  }
+}

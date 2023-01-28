@@ -1,0 +1,22 @@
+.appNavLink {
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--greyTextColor);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.appNavLink.active {
+  color: var(--mainTextColor);
+}
+
+.appNavLink:not(:last-child) {
+  margin-right: 14px;
+}
+@media screen and (min-width: 768px) {
+  .appNavLink:not(:last-child) {
+    margin-right: 24px;
+  }
+}

@@ -1,0 +1,46 @@
+.title {
+  padding-top: 8px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accentColor);
+}
+
+.btnWrp {
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.inputWrp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.passWrp {
+  width: fit-content;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    padding-top: 55px;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  .inputWrp {
+    align-items: flex-start;
+  }
+  .btnWrp {
+    height: fit-content;
+    width: 395px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
