@@ -2,6 +2,7 @@
   "name": "project-slim-mom",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Dima-Davidenko.github.io/SlimMomApp/",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
