@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ab45f2e9.css",
+    "main.js": "/static/js/main.cb4ca217.js",
+    "static/media/back-desk.png": "/static/media/back-desk.b07b6c9a92274bb2889d.png",
+    "static/media/back-tab.png": "/static/media/back-tab.107e32fa1b52b2b3ed09.png",
+    "static/media/logo.png": "/static/media/logo.ffe21a520ab82bf25980.png",
+    "static/media/logoLight.png": "/static/media/logoLight.654a2dcf98beb397438c.png",
+    "static/media/uk.png": "/static/media/uk.a212a5ff2ebde04bac65.png",
+    "static/media/layer42.png": "/static/media/layer42.725d97c18a4e5e38848a.png",
+    "static/media/en.png": "/static/media/en.5144f3ccd539c5f6eb23.png",
+    "static/media/ru.png": "/static/media/ru.5fd582d3ea6de079311f.png",
+    "static/media/layer41.png": "/static/media/layer41.7887c12ec4fc572fe392.png",
+    "static/media/slimMomLight.svg": "/static/media/slimMomLight.efc470101d6bc7d4f24c0887233eccb2.svg",
+    "static/media/slimMom.svg": "/static/media/slimMom.77bebc30024a48b07840cf382d3479f9.svg",
+    "index.html": "/index.html",
+    "static/media/closeModalBtn.svg": "/static/media/closeModalBtn.8b0b169a772dfb2ec183581943cf2094.svg",
+    "static/media/cross.svg": "/static/media/cross.8cdb920ca8331504fc33.svg",
+    "main.ab45f2e9.css.map": "/static/css/main.ab45f2e9.css.map",
+    "main.cb4ca217.js.map": "/static/js/main.cb4ca217.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab45f2e9.css",
+    "static/js/main.cb4ca217.js"
+  ]
+}
