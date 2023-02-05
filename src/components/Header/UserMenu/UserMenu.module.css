@@ -1,25 +1,12 @@
 .container {
-  display: none;
-}
-
-.container.LoggedIn.underBar {
   display: flex;
 }
-
-.container.LoggedIn.header {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  .container.LoggedIn.underBar {
-    display: none;
-  }
-  .container.LoggedIn.header {
-    display: flex;
-    margin-right: 48px;
+@media screen and (min-width: 1280px) {
+  .container {
+    justify-content: flex-end;
+    padding-right: 50px;
   }
 }
-
 .title {
   display: block;
   height: 32px;
@@ -32,6 +19,9 @@
   padding-right: 16px;
   color: var(--mainTextColor);
   border-right: 1px solid var(--greyColor);
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .logOutBtn {
@@ -39,5 +29,6 @@
   padding-left: 16px;
   border: none;
   background-color: transparent;
-  color: var(--greyTextColor);
+  color: var(--exitBtnColor);
+  cursor: pointer;
 }

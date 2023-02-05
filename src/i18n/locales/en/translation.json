@@ -1,0 +1,121 @@
+{
+  "auth": {
+    "title": {
+      "login": "Log In",
+      "registration": "Registration",
+      "exit": "Exit"
+    },
+    "input": {
+      "email": {
+        "label": "Email"
+      },
+      "name": {
+        "label": "Name"
+      },
+      "pass": {
+        "label": "Password"
+      },
+      "confirm": {
+        "label": "Confirm password",
+        "err": "Passwords are different."
+      }
+    },
+    "min": "Min length",
+    "max": "Max length",
+    "required": "Required.",
+    "err": "Wrong format.",
+    "notific": {
+      "reg": {
+        "succ": "You successfully registered",
+        "err": {
+          "have": "Provided email already exists!",
+          "failed": "Failed to register, try again pls!"
+        }
+      }
+    }
+  },
+  "calc": {
+    "title": "Calculate your daily calorie intake right now",
+    "noUserData": "Enter your details in this form to be able to use all functions of our app",
+    "form": {
+      "title": {
+        "height": "Height, cm",
+        "age": "Age",
+        "curWeight": "Current weight, kg",
+        "desWeight": "Desired weight, kg",
+        "bloodType": "Blood type"
+      },
+      "numberOnly": "Number only",
+      "req": "This field is required",
+      "positive": "Must be a positive number",
+      "min": "Value must be more than",
+      "minAge": "You must be of legal age (18 years)",
+      "integer": "Only integer.",
+      "err": "Wrong format.",
+      "max": "Max value is",
+      "bloodTypeErr": "Choose blood type"
+    },
+    "btnText": "Start losing weight",
+    "modal": {
+      "title": "Your recommended daily calorie intake is",
+      "kcal": "kcal",
+      "noEatTitle": "Foods you should not eat"
+    }
+  },
+  "summary": {
+    "title": "Summary for",
+    "left": "Left",
+    "consumed": "Consumed",
+    "daily": "Daily rate",
+    "n": "n% of normal",
+    "noFoodTitle": "Food not recommended",
+    "noFoodText": "Your diet will be displayed here",
+    "overWeight": "Stop eating, already overeat",
+    "filter": "Filter products",
+    "kcal": "kcal"
+  },
+  "diary": {
+    "enterProduct": "Enter product name",
+    "noselectedDate": "There are no products on the selected date",
+    "grams": "Grams",
+    "g": "g",
+    "kcal": "kcal",
+    "noOptionsText": "No products...",
+    "loadingText": "Loading products...",
+    "chooseProduct": "Choose product from the list",
+    "btn": "Add"
+  },
+  "navigate": {
+    "diary": "Diary",
+    "calc": "Calculator"
+  },
+  "notFoundPage": {
+    "title": "Not Found Page",
+    "textLink": "Go home"
+  },
+  "notify": {
+    "auth": {
+      "greet": "Nice to see you again",
+      "wentWrong": "Something went wrong",
+      "tryAgain": "Please try again",
+      "check": "Check user's data",
+      "welcome": "Welcome",
+      "error": "An error occurred"
+    },
+    "diet": {
+      "addNewProduct": "Add new product...",
+      "addSuccess": "New product has been successfully added.",
+      "addError": "Can not add new product. An error happened...",
+      "deleting": "Deleting product...",
+      "deleteSuccess": "Product successfully deleted",
+      "deleteError": "Can not delete new product. An error happened...",
+      "noProducts": "No allowed products found for this query",
+      "dailyRate": "Calculating rate for you...",
+      "dailyRateSuccess": "Data calculated successfully",
+      "dailyRateError": "Can not calculate. An error happened..."
+    },
+    "other": {
+      "networkError": "Network Error has occurred! Try again."
+    }
+  }
+}

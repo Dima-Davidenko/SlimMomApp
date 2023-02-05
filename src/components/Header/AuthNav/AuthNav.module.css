@@ -1,9 +1,6 @@
 .container {
   display: flex;
 }
-.container.LoggedIn {
-  display: none;
-}
 @media screen and (min-width: 1280px) {
   .container {
     align-items: center;

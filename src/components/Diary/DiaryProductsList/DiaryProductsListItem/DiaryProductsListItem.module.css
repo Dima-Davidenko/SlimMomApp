@@ -1,0 +1,84 @@
+.item {
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr 0.4fr;
+  gap: 10px;
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.04em;
+  color: var(--mainTextColor);
+}
+
+.item:not(:first-child) {
+  padding-top: 10px;
+}
+
+.cell {
+  display: flex;
+  align-items: flex-end;
+}
+
+.cell p {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+}
+.cell.productName p {
+  justify-content: start;
+}
+
+.kcal {
+  white-space: nowrap;
+}
+.unit {
+  font-size: 8px;
+}
+.cell span {
+  display: block;
+}
+
+@media (min-width: 426px) {
+  .item {
+    gap: 20px;
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .item:not(:first-child) {
+    padding-top: 20px;
+  }
+  .unit {
+    font-size: 12px;
+  }
+}
+
+.deleteIcon {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  background-image: url('../../../../assets/images/cross.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  animation-duration: 800ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.deleteIcon.deleting {
+  animation-name: delete;
+}
+
+@keyframes delete {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,5 +1,16 @@
 .container {
   max-width: 550px;
+  padding: 32px 20px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 100px 32px 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    padding: 120px 32px 0;
+  }
 }
 .formTitle {
   margin-bottom: 20px;
@@ -7,9 +18,9 @@
   font-size: 18px;
   line-height: 1.4;
 }
-
 .button {
   text-align: center;
+  padding-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {

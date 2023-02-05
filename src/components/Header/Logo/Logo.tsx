@@ -11,10 +11,11 @@ import logoSlimMomLight from '../../../assets/images/slimMomLight.svg';
 import { useSelector } from 'react-redux';
 import { selectCurrentTheme } from '../../../redux/theme/themeSelectors';
 import { ThemeNames } from '../../../types/themeNames';
+import { selectIsLoggedIn } from '../../../redux/auth/authSelectors';
 
 const Logo: React.FC = () => {
   const navigate = useNavigate();
-  const isLoggedIn = false;
+  const isLoggedIn = useSelector(selectIsLoggedIn);
   const currentTheme = useSelector(selectCurrentTheme);
   return (
     <div

@@ -130,14 +130,26 @@ table {
   --greyBgColor: #eff1f3;
   --mainTextColor: #212121;
   --accentColor: #fc842d;
+  --secAccColor: #264061;
+  --exitBtnColor: #9b9faa;
+  --langBoxShadow: 5px 5px 5px rgba(238, 222, 206, 0.829);
+  --summaryBgColor: #f0f1f3;
+  --summaryTitleColor: #212121;
+  --summaryTextColor: #9b9faa;
 }
 :root.themeDark {
   --bgColor: #424242;
   --greyColor: #e0e0e0;
-  --greyTextColor: #9b9faa;
-  --greyBgColor: #eff1f3;
+  --greyTextColor: #e0e0e0;
+  --greyBgColor: #9b9faa;
   --mainTextColor: #ffffff;
   --accentColor: #fc842d;
+  --secAccColor: #ffffff;
+  --exitBtnColor: #e0e0e0;
+  --langBoxShadow: 5px 5px 5px rgba(40, 38, 35, 0.829);
+  --summaryBgColor: #424242;
+  --summaryTitleColor: #212121;
+  --summaryTextColor: #e0e0e0;
 }
 body {
   font-family: Verdana;
@@ -145,8 +157,13 @@ body {
   color: var(--mainTextColor);
   background-color: var(--bgColor);
 }
+body.modalOpen {
+  overflow: hidden;
+}
 
 .appContainer {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   max-width: 1280px;
   min-height: 100vh;
@@ -163,4 +180,27 @@ body {
   .backgroundImg {
     background-image: url('./assets/images/back-desk.png');
   }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  height: 25px;
+  background: var(--secAccColor);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accentColor);
 }

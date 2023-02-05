@@ -1,5 +1,5 @@
-import React from 'react';
 import { useFormik } from 'formik';
+import React, { useRef } from 'react';
 
 import {
   Button,
@@ -16,54 +16,78 @@ import {
 import css from './CalculatorForm.module.css';
 import { formControlStyles, formHeperTextStyles, inputStyles } from './CalculatorForm.styles';
 
-import { IUserData } from '../../types/userInfo';
+import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
 import { schemaCalculator } from '../../assets/validation/schemas';
+import { selectAccessToken } from '../../redux/auth/authSelectors';
+import { useGetUserInfoQuery } from '../../redux/diet/dietApi';
+import { ICalculatorFormData } from '../../types/dietApiTypes';
 
 interface IProps {
-  onFormSubmit: Function;
-  userData: IUserData | null;
+  onFormSubmit: (body: ICalculatorFormData) => void;
 }
-interface IInitValues {
-  age: string | number;
-  height: string | number;
-  weight: string | number;
-  desiredWeight: string | number;
-  bloodType: number | null;
-}
-
-const CalculatorForm: React.FC<IProps> = ({ onFormSubmit, userData }) => {
-  let initialValues: IInitValues = {
+const CalculatorForm: React.FC<IProps> = ({ onFormSubmit }) => {
+  const { t, i18n } = useTranslation('translation', { keyPrefix: 'calc' });
+  const accessToken = useSelector(selectAccessToken);
+  const lang = useRef('');
+  const { data: userInfo } = useGetUserInfoQuery(null, { skip: !accessToken });
+  const userData = userInfo?.userData;
+  let initialValues: ICalculatorFormData = {
     age: '',
     height: '',
     weight: '',
     desiredWeight: '',
-    bloodType: null,
+    bloodType: 0,
   };
   if (userData) {
     const { age, height, weight, desiredWeight, bloodType } = userData;
-    initialValues = { age, height, weight, desiredWeight, bloodType };
+    initialValues = {
+      age: age || '',
+      height: height || '',
+      weight: weight || '',
+      desiredWeight: desiredWeight || '',
+      bloodType,
+    };
   }
   const formik = useFormik({
     initialValues,
     enableReinitialize: true,
-    validationSchema: schemaCalculator,
+    validationSchema: schemaCalculator(t),
     onSubmit: (values, { setSubmitting, resetForm }) => {
-      onFormSubmit(values);
+      const age = +values.age;
+      const height = +values.height;
+      const weight = +values.weight;
+      const desiredWeight = +values.desiredWeight;
+      const bloodType = +values.bloodType;
+      onFormSubmit({ age, height, weight, desiredWeight, bloodType });
       setSubmitting(false);
       resetForm();
     },
     validateOnBlur: true,
   });
+
+  // Dynamic translation of helper text with errors
+  setTimeout(() => {
+    if (i18n.language !== lang.current) {
+      Object.keys(formik.errors).forEach(fieldName => {
+        if (Object.keys(formik.touched).includes(fieldName)) {
+          formik.setFieldTouched(fieldName);
+        }
+      });
+      lang.current = i18n.language;
+    }
+  }, 0);
+
   return (
     <div className={css.container}>
-      <h2 className={css.formTitle}>Calculate your daily calorie intake right now</h2>
+      <h2 className={css.formTitle}>{t('title')}</h2>
       <form onSubmit={formik.handleSubmit}>
         <div className={css.inputsWrapper}>
           <div>
             <TextField
               id="form__input-height"
               name="height"
-              label="Height"
+              label={t('form.title.height')}
               value={formik.values.height}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -74,7 +98,7 @@ const CalculatorForm: React.FC<IProps> = ({ onFormSubmit, userData }) => {
             <TextField
               id="form__input-age"
               name="age"
-              label="Age"
+              label={t('form.title.age')}
               value={formik.values.age}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -85,7 +109,7 @@ const CalculatorForm: React.FC<IProps> = ({ onFormSubmit, userData }) => {
             <TextField
               id="form__input-current-weight"
               name="weight"
-              label="Current weight"
+              label={t('form.title.curWeight')}
               value={formik.values.weight}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -98,7 +122,7 @@ const CalculatorForm: React.FC<IProps> = ({ onFormSubmit, userData }) => {
             <TextField
               id="form__input-desired-weight"
               name="desiredWeight"
-              label="Desired weight"
+              label={t('form.title.desWeight')}
               value={formik.values.desiredWeight}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -110,7 +134,7 @@ const CalculatorForm: React.FC<IProps> = ({ onFormSubmit, userData }) => {
               sx={formControlStyles}
               error={formik.touched.bloodType && Boolean(formik.errors.bloodType)}
             >
-              <FormLabel id="bloodType-label">Blood type</FormLabel>
+              <FormLabel id="bloodType-label">{t('form.title.bloodType')}</FormLabel>
               <RadioGroup
                 row
                 aria-labelledby="demo-bloodType-label"
@@ -149,7 +173,7 @@ const CalculatorForm: React.FC<IProps> = ({ onFormSubmit, userData }) => {
         </div>
         <div className={css.button}>
           <Button type="submit" variant="contained">
-            Start loosing weight
+            {t('btnText') ?? 'Start losing weight'}
           </Button>
         </div>
       </form>

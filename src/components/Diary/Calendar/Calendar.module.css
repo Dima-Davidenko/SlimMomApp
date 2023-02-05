@@ -1,0 +1,24 @@
+.container {
+  padding-top: 40px;
+}
+.dateInput {
+  width: 130px;
+  border: none;
+  outline: none;
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  pointer-events: none;
+  caret-color: transparent;
+  color: var(--mainTextColor);
+  background-color: var(--bgColor);
+}
+@media screen and (min-width: 768px) {
+  .dateInput {
+    width: 220px;
+    font-size: 34px;
+    line-height: 41px;
+  }
+}

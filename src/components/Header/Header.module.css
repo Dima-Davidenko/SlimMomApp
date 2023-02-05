@@ -2,11 +2,13 @@
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 80px;
   padding: 20px;
   padding-bottom: 16px;
   border-bottom: 2px solid var(--greyColor);
+}
+.userMenuWrp {
+  padding-right: 48px;
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -22,5 +24,12 @@
     padding-left: 16px;
     border: none;
     height: 155px;
+  }
+  .userMenuWrp {
+    position: relative;
+    right: calc((1280px - 100vw) / 2);
+    z-index: 100;
+    padding-right: 48px;
+    flex-grow: 1;
   }
 }

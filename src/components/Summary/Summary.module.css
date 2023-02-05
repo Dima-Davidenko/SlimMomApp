@@ -1,0 +1,12 @@
+.container {
+  min-height: 360px;
+  max-height: 450px;
+  background-color: var(--summaryBgColor);
+}
+
+.title {
+  color: var(--summaryTitleColor);
+}
+.text {
+  color: var(--summaryTextColor);
+}

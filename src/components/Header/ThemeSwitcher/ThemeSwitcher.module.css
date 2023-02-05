@@ -1,0 +1,11 @@
+.container.header {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .container.setupMenu {
+    display: none;
+  }
+  .container.header {
+    display: flex;
+  }
+}

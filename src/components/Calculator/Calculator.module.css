@@ -1,0 +1,13 @@
+.warnNoUserData {
+  width: 80vw;
+  margin: 0 auto;
+  padding-top: 20px;
+  text-align: center;
+  color: red;
+}
+@media screen and (min-width: 1280px) {
+  .warnNoUserData {
+    margin: 0;
+    width: 50vw;
+  }
+}

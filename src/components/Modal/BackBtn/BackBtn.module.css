@@ -1,0 +1,15 @@
+.backBtn {
+  position: absolute;
+  display: block;
+  top: -67px;
+  left: 20px;
+  padding: 5px;
+  padding-left: 20px;
+  margin: 0;
+  border: 1px solid var(--bgColor);
+  border-radius: 8px;
+  background-color: transparent;
+  background-position: left;
+  background-size: auto;
+  background-repeat: no-repeat;
+}

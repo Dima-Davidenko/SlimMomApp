@@ -1,0 +1,18 @@
+.container {
+  min-height: 70vh;
+  margin-bottom: 30px;
+}
+.mobAddProductForm {
+  position: fixed;
+  top: 150px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bgColor);
+}
+.btnOpenModalWrp {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

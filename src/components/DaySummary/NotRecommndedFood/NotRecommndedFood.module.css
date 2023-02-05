@@ -1,0 +1,31 @@
+.title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.04em;
+}
+.notRec {
+  margin-bottom: 10px;
+}
+.recom {
+  max-height: 150px;
+  overflow-y: auto;
+}
+.list {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.04em;
+  color: #9b9faa;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+}
+.item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.filterInput {
+  margin-bottom: 15px;
+}

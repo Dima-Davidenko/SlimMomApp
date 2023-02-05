@@ -69,6 +69,21 @@ export const lightTheme = createTheme({
         },
       },
     },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#FFFFFF',
+        },
+      },
+    },
+    MuiAutocomplete: {
+      styleOverrides: {
+        listbox: {
+          backgroundColor: '#FFFFFF',
+          color: '#424242',
+        },
+      },
+    },
     MuiButton: {
       defaultProps: {
         variant: 'contained',
@@ -83,6 +98,7 @@ export const lightTheme = createTheme({
     },
   },
 });
+
 export const darkTheme = createTheme({
   palette: {
     text: {
@@ -170,6 +186,31 @@ export const darkTheme = createTheme({
           minWidth: '180px',
           borderRadius: '30px',
           padding: '11px 25px',
+        },
+      },
+    },
+    MuiAutocomplete: {
+      styleOverrides: {
+        listbox: {
+          backgroundColor: '#424242',
+          color: '#E0E0E0',
+        },
+      },
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#424242',
+          '& .MuiButtonBase-root': {
+            backgroundColor: '#424242',
+          },
+        },
+      },
+    },
+    MuiList: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#424242',
         },
       },
     },

@@ -4,8 +4,9 @@ import { setDarkTheme, setLightTheme } from '../../../redux/theme/themeSlice';
 import { setTheme, storageThemeKeyName } from '../../../theme/themeSwitch';
 import { ThemeNames } from '../../../types/themeNames';
 import './ThemeSwitcher.css';
+import css from './ThemeSwitcher.module.css';
 
-const ThemeSwitcher = () => {
+const ThemeSwitcher: React.FC = () => {
   const [check, setCheck] = useState(false);
   const dispatch = useAppDispatch();
 
@@ -28,10 +29,12 @@ const ThemeSwitcher = () => {
     }
   };
   return (
-    <label className="switch">
-      <input className="inputBox" type="checkbox" checked={check} onChange={toggleTheme} />
-      <span className="round slider"></span>
-    </label>
+    <div className={css.container}>
+      <label className="switch">
+        <input className="inputBox" type="checkbox" checked={check} onChange={toggleTheme} />
+        <span className="round slider"></span>
+      </label>
+    </div>
   );
 };
 

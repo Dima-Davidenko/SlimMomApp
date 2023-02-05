@@ -1,20 +1,16 @@
 import React from 'react';
-import clsx from 'clsx';
 
 import css from './AuthNav.module.css';
 
+import { useTranslation } from 'react-i18next';
 import AppNavLink from '../AppNavLink/AppNavLink';
 
 const AuthNav: React.FC = () => {
-  const isLoggedIn = false;
+  const { t } = useTranslation('translation', { keyPrefix: 'auth.title' });
   return (
-    <div
-      className={clsx(css.container, {
-        [css.LoggedIn]: isLoggedIn,
-      })}
-    >
-      <AppNavLink text="Log in" path="/login" />
-      <AppNavLink text="Registration" path="/registration" />
+    <div className={css.container}>
+      <AppNavLink text={t('login')} path="/login" />
+      <AppNavLink text={t('registration')} path="/registration" />
     </div>
   );
 };

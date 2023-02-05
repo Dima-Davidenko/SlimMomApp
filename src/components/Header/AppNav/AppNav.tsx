@@ -1,22 +1,18 @@
 import React from 'react';
-import clsx from 'clsx';
 
 import css from './AppNav.module.css';
 
 import AppNavLink from '../AppNavLink/AppNavLink';
 
+import { useTranslation } from 'react-i18next';
 import { appNavMenuArr } from '../../../assets/appNavMenu/appNavMenu';
 
 const AppNav: React.FC = () => {
-  const isLoggedIn = false;
+  const { t } = useTranslation();
   return (
-    <nav
-      className={clsx(css.container, {
-        [css.LoggedIn]: isLoggedIn,
-      })}
-    >
+    <nav className={css.container}>
       {appNavMenuArr.map(link => (
-        <AppNavLink text={link.title} path={link.path} />
+        <AppNavLink key={link.title} text={t(link.title)} path={link.path} />
       ))}
     </nav>
   );

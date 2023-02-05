@@ -1,11 +1,11 @@
 type INavMenuArr = Array<{ title: string; path: string }>;
 export const appNavMenuArr: INavMenuArr = [
   {
-    title: 'Diary',
+    title: 'navigate.diary',
     path: '/diary',
   },
   {
-    title: 'Calculator',
+    title: 'navigate.calc',
     path: '/calculator',
   },
 ];
